@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 body {
   background-color: rgb(231, 231, 231);
@@ -13,12 +13,13 @@ body {
   background-size: cover;
   background-position: center;
   object-fit: cover;
-  height: 550px;
-  font-size: 15px;
+  height: 650px;
+  font-size: 1.1em;
   width: 100%;
 }
+
 .hero.toggled {
-  height: 840px;
+  height: 940px;
 }
 nav {
   display: flex;
@@ -61,9 +62,10 @@ nav {
   flex: 0.8;
   padding-top: 5px;
   position: relative;
+  cursor: pointer;
 }
 .cta-button {
-  width: fit-content;
+  width: 120px;
   height: fit-content;
   border: 1px solid white;
   border-radius: 20px;
@@ -76,6 +78,9 @@ nav {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  text-align: center;
+  display: block;
+  margin: 0px auto;
 }
 .nav-links {
   padding-top: 20px;
@@ -112,7 +117,7 @@ nav {
   color: white;
 }
 .search-wrapper p {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .search-bar {
   display: flex;
@@ -123,11 +128,25 @@ nav {
   flex: 3;
   border: 0px;
   border-right: 1px solid gray;
+  padding: 20px;
+}
+input::placeholder {
+  font-size: 1.2em;
+}
+select {
+  font-size: 0.9em;
+  font-weight: lighter;
+  background: url(angle_down.png) no-repeat right white;
+  -webkit-appearance: none;
+  background-size: 13px;
+  background-position-x: 90%;
 }
 .search-bar .city {
   flex: 3;
   border: 0px;
   width: 20vw;
+  padding: 10px;
+  color: rgb(99, 99, 99);
 }
 .search {
   background-color: rgb(204, 85, 85);
@@ -142,6 +161,7 @@ nav {
 .below-search {
   margin-top: 20px;
   letter-spacing: 1px;
+  font-size: 0.9em;
 }
 .highlights {
   margin-top: 20px;
@@ -155,8 +175,12 @@ nav {
   display: inline;
   float: left;
   margin-right: 20px;
+  margin-top: 10px;
   padding: 10px;
   color: rgb(99, 99, 99);
+}
+.highlight-cards i {
+  margin-right: 10px;
 }
 .cards {
   margin: 0px 10%;
@@ -166,19 +190,22 @@ nav {
 }
 .card {
   text-align: center;
-  padding: 10px;
+  padding: 10px 30px 10px 30px;
   background-color: white;
   width: 200px;
   transform: translate(0px, -30px);
   margin-bottom: 20px;
 }
 .card h3 {
+  font-size: 1.2em;
   width: 140px;
   margin: 0px auto 20px auto;
+  line-height: 1.4;
 }
 .card p {
   color: grey;
   margin-bottom: 30px;
+  line-height: 1.5;
 }
 .picture {
   font-size: 50px;
@@ -186,7 +213,7 @@ nav {
   color: rgb(204, 85, 85);
   margin-top: 10px;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   nav {
     display: flex;
     flex-direction: column;
@@ -215,18 +242,21 @@ nav {
   }
   .cta {
     position: absolute;
-    top: 5px;
+    top: 3px;
     right: 50px;
     width: 100px;
+  }
+  select {
+    background: white;
   }
 }
 @media (max-width: 500px) {
   .hero {
-    height: 570px;
+    height: 760px;
   }
   .card {
-    transform: translate(0, 0);
     width: 100%;
+    transform: translateY(-50px);
   }
   .highlight-cards {
     margin-top: 10px;
